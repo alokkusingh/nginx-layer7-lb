@@ -4,8 +4,8 @@ Nginx Setup for Layer 7 (Application Layer) Load Balancing with Client Certifica
 
 ## Advantage of using Layer 7 Load Balancer
 - URI/Header/Session based Sticky Session possible
-- TLS Off loading is done at Load Balancer level to avoid CPU intensive operation at Application Level
-- Load Balancer to Backend Server can have longer Keep Alive time
+- TLS Off loading is done at Load Balancer level to avoid CPU intensive TLS handshaking at Application Level
+- Load Balancer to Backend Server can have longer Keep Alive time to avoid frequent TLS handshake 
 
 ## Limitations
 - 2 TCP connection - 1 from client to Load Balancer and 1 from Load Balancer to Backend Server
